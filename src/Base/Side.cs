@@ -32,5 +32,7 @@ namespace UnityChess {
 			Side.Black => 7,
 			_ => throw new InvalidEnumArgumentException(nameof(side), (int) side, typeof(Side))
 		};
+
+		public static bool IsWhite(this Piece piece) => piece.Owner == Side.White;
 	}
 }
